@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 
 # Project-specific
-plot_output/
+plot_frames/
+*.png
+*.gif

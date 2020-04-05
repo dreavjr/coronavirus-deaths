@@ -1,3 +1,4 @@
+imageio==2.8.0
 jupyter==1.0.0
 lxml==4.5.0
 matplotlib==3.2.1
