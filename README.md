@@ -10,3 +10,13 @@ The data sources used by this software may be subjected to their own licenses an
 
 To run this notebook you need Python, jupyter, NumPy, pandas, lxml, and Matplotlib. In addition, it requires imageio to create the animated plot, and pygifsicle to compress the size of the animation. Please check [requirements.txt](https://github.com/dreavjr/coronavirus-deaths/blob/master/requirements.txt).
 
+## Certificates issue in Python
+
+The new versions of Python seem to require explicit installation of root certificates (at least in OS X). If you encounter a CERTIFICATE_VERIFY_FAILED error (or similar) try the following:
+
+```bash
+pip install certifi
+CERT_PATH=$(python -m certifi)
+export SSL_CERT_FILE=${CERT_PATH}
+export REQUESTS_CA_BUNDLE=${CERT_PATH}
+```
